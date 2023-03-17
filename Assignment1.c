@@ -24,15 +24,12 @@ int countNegativeNumbers(int* arr, int n)
   void printArray(int* arr, int n)
 {
  int i;
- 
- printf("Array: ");
+  printf("Array: ");
  for (i = 0; i < n; i++) {
   printf("%d ", arr[i]);
  }
  printf("\n");
 }
- 
-// Driver program
 int main()
 {
  int arr[] = { 2, -1, 5, 6, 0, -3 };
