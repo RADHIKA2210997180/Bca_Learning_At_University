@@ -2,46 +2,34 @@
 
 
  include<stdio.h>
- int countPositiveNumbers(int* arr, int n)
+ int main()
 {
- int positive_count = 0;
- int i;
- for (i = 0; i < n; i++) {
-  if (arr[i] > 0)
-   positive_count++;
- }
- return positive_count;
-}
-int countNegativeNumbers(int* arr, int n)
-{
- int negative_count = 0;
- int i;
- for (i = 0; i < n; i++) {
-  if (arr[i] < 0)
-   negative_count++;
- }
- return negative_count;;
-  void printArray(int* arr, int n)
-{
- int i;
-  printf("Array: ");
- for (i = 0; i < n; i++) {
-  printf("%d ", arr[i]);
- }
- printf("\n");
-}
-int main()
-{
- int arr[] = { 2, -1, 5, 6, 0, -3 };
- int n;
- n = sizeof(arr) / sizeof(arr[0]);
- 
- printArray(arr, n);
- 
- printf("Count of Positive elements = %d\n",
-  countPositiveNumbers(arr, n));
- printf("Count of Negative elements = %d\n",
-  countNegativeNumbers(arr, n));
- 
- return 0;
+  int limit, num, positive = 0, negative = 0, zero = 0,i;  
+  
+    printf("Enter the limit\n");  
+    scanf("%d", &limit);  
+  
+    printf("Enter %d numbers\n", limit);  
+  
+    for(i=0;i<limit;i++)  
+    {  
+        scanf("%d", &num);    
+        if(num > 0)  
+        {  
+            positive++;  
+        }  
+        else if(num < 0)  
+        {  
+            negative++;  
+        }  
+        else  
+        {  
+            zero++;  
+        }  
+    }  
+    printf("\nPositive Numbers: %d\n", positive);  
+    printf("Negative Numbers: %d\n", negative);  
+    printf("Number of zero: %d\n", zero);  
+  return 0;
+
 }
